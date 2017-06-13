@@ -16,11 +16,9 @@ $(document).ready(function() {
 	$('.main-nav .desktop li.close').click(function() {
 		$('.main-nav .desktop').addClass('slide-out');
 	});
-	
+
 	$.fancybox.defaults.margin = [0,0];
 	$.fancybox.defaults.focus = false;
-	console.log($.fancybox.defaults);
-
 });
 
 function masonryInit(container, options) {
@@ -33,4 +31,3 @@ function masonryInit(container, options) {
 		}
 	});
 }
-
