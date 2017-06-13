@@ -95,6 +95,13 @@ main{
 	/*max-width: 1405px;*/
 	margin: auto;
 }
+.main-content .skrollable{
+	position: fixed;
+	height: auto;
+    /* max-width: 100%; */
+    vertical-align: middle;
+}
+
 
 .grid{
 	max-width: 100%;
