@@ -15,6 +15,7 @@ main{
 	position: relative;
 }
 
+
 /*STYLES OF MAIN NAV*/
 .main-nav{
 	height: 100%;
@@ -24,9 +25,6 @@ main{
 	left: 0;
 	z-index: 2;
 	max-width: 211px;
-	/*padding: 30px 25px;
-	background-color: #FAFAFA;
-	box-shadow:  5px 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 .main-nav li{
 	list-style: none;
@@ -84,6 +82,79 @@ main{
 .main-nav .mobile{
 	display: none;
 }
+/*Styles for the home page*/
+.main-nav.no-menu{
+	width: 50px;
+}
+.main-nav.no-menu h1.title{
+	position: fixed;
+    top: 0;
+    left: 70px;
+    font-family:'Fjalla One', sans-serif;
+    transition: opacity 200ms ease;
+    z-index: 5;
+}
+.main-nav.no-menu h1.title.out{
+	opacity: 0;
+	z-index: 0;
+}
+.main-nav.no-menu .mobile{
+	display: block;
+}
+.main-nav.no-menu  .desktop{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	padding: 25px 25px;
+	width: 180px;
+	transform: translateX(0);
+	transition: transform 600ms ease-out;
+}
+.main-nav.no-menu .desktop.slide-out{
+	transform: translateX(-500px);
+}
+.main-nav.no-menu .desktop li.title{
+	font-size: 18px;
+}
+.main-nav.no-menu .desktop li.item{
+	font-size: 18px;
+	padding-left: 5px;
+}
+.main-nav.no-menu .desktop li.close{
+	display: block;
+	position: relative;
+	bottom: 18px;
+	left: 14px;
+	color: #0092CA;
+	opacity: .5;
+}
+.main-nav.no-menu .mobile{
+	position: relative;
+	display: block;
+	padding: 0;
+	cursor: pointer;
+}
+.main-nav.no-menu .mobile .arrow{
+	font-size: 25px;
+}
+.main-nav.no-menu .mobile ul{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.main-nav.no-menu .mobile ul li.title{
+	margin: 0;
+	width: 100vh;
+	text-align: center;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+.main-content.custom{
+	padding-left: 50px;
+}
 /*END OF STYLES OF MAIN NAV*/
 
 /*STYLES OF MAIN CONTENT*/
@@ -98,8 +169,8 @@ main{
 .main-content .skrollable{
 	position: fixed;
 	height: auto;
-    /* max-width: 100%; */
-    vertical-align: middle;
+	/* max-width: 100%; */
+	vertical-align: middle;
 }
 
 
@@ -259,7 +330,7 @@ main{
 	.grid.custom .grid-item {
 		width: 50%;
 	}
-	.grid.custom .grid-item--width2 { width:  100   %; }
+	.grid.custom .grid-item--width2 { width:  100%; }
 	.main-nav{
 		width: 50px;
 	}
@@ -304,6 +375,13 @@ main{
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(-90deg);
 	}
+	.main-nav.no-menu .mobile ul{
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 	.main-nav .mobile ul li.title{
 		margin: 0;
 		width: 100vh;
@@ -313,6 +391,11 @@ main{
 	}
 	.main-content{
 		padding-left: 50px;
+	}
+	.main-content > img{
+		position: static;
+		display: block;
+		margin: 10px auto;
 	}
 }
 @media (max-width: 450px) {
