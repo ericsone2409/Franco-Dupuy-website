@@ -8,14 +8,12 @@
  
 body {
 	background: #FAFAFA;
-	font-family: arial, helvetica, sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 16px;
 }
 main{
 	position: relative;
 }
-
-
 /*STYLES OF MAIN NAV*/
 .main-nav{
 	height: 100%;
@@ -25,6 +23,7 @@ main{
 	left: 0;
 	z-index: 2;
 	max-width: 211px;
+	min-width: 133px;
 }
 .main-nav li{
 	list-style: none;
@@ -39,12 +38,10 @@ main{
 	font-size: 22px;
 	margin-bottom: 20px;
 	color: #222831;
-	font-family:'Fjalla One', sans-serif;
 }
 .main-nav .desktop li.item{
 	padding-left: 15px;
 	margin-bottom: 15px;
-	font-family: 'Noto Sans', sans-serif;
 }
 .main-nav .desktop li.item a:after{
 	content: '';
@@ -78,7 +75,41 @@ main{
 .main-nav .desktop li.close{
 	display: none;
 }
-
+.main-nav .contact{
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.main-nav .contact .mail{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.main-nav .contact a{
+	font-size: 13px;
+	color: #666;
+	display: inline-block;
+}
+.main-nav .contact a:hover, .main-nav .contact a:visited, .main-nav .contact a:focus{
+	text-decoration: none;
+	outline: none;
+}
+.main-nav .contact a:after{
+	content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 15px;
+	background: #0092CA;
+	transition: width .6s ease-out;
+}
+.main-nav .contact a:hover:after{
+	width: 100%;
+}
+.main-nav .contact i{
+	margin-right: 3px;
+}
 .main-nav .mobile{
 	display: none;
 }
@@ -90,7 +121,6 @@ main{
 	position: fixed;
     top: 0;
     left: 70px;
-    font-family:'Fjalla One', sans-serif;
     transition: opacity 200ms ease;
     z-index: 5;
 }
@@ -333,6 +363,7 @@ main{
 	.grid.custom .grid-item--width2 { width:  100%; }
 	.main-nav{
 		width: 50px;
+		min-width: auto;
 	}
 	.main-nav .desktop{
 		position: absolute;
@@ -396,6 +427,7 @@ main{
 		position: static;
 		display: block;
 		margin: 10px auto;
+		max-width: 95%;
 	}
 }
 @media (max-width: 450px) {
